@@ -8,15 +8,9 @@ const argv = yargs(hideBin(process.argv)).argv;
 let output = "";
 const currentDate = new Date();
 
-const year =    (argv.year) ? argv.year :
-                (argv.y) ? argv.y :
-                0;
-const month =   (argv.month) ? argv.month :
-                (argv.m) ? argv.m :
-                0;
-const day =     (argv.date) ? argv.date :
-                (argv.d) ? argv.d :
-                0;;
+const year =    argv.year ?? argv.y ?? 0;
+const month =   argv.month ?? argv.m ?? 0;
+const day =     argv.date ?? argv.d ?? 0;
 
 if (argv._ == 'current') {
     if (argv.year || argv.y) {
