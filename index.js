@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
-const yargs = require('yargs/yargs');
-const { hideBin } = require('yargs/helpers');
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
 
+// eslint-disable-next-line no-undef
 const argv = yargs(hideBin(process.argv)).argv;
 
 let output = "";
